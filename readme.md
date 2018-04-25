@@ -35,16 +35,37 @@ you've updated your browser recently in order to ensure all examples work as
 expected. These examples were created using `Google Chrome Version 65.0.3325.181`
 and `Firefox Quantum 59.0.2`.
 
-## Practicing with These Examples
+***
 
-Each example has a START and FINISH version. The START versions have some setup
-done for you and explain what changes are needed in order to complete the
-example. If you follow the instructions correctly, you should end up at the
-FINISH version (or something equivalent it).
+## Resources
 
-When you make changes and save them, they will automatically appear in your
-browser without having to refresh the page so you can focus on the code and not
-constantly refreshing to see your changes.
+Here are some resources I've used to learn about web layouts:
+
+### Box Model
+
+- CSS Box Model [[Tutorial](https://www.w3schools.com/css/css_boxmodel.asp)]
+
+### Float Layouts
+
+Probably just Google how to do stuff... Everything you find about float layouts is inherently going to be hacky (unless you're flowing content around text). :P
+
+### Flexbox
+
+- A Complete Guide to Flexbox - CSS Tricks [[Article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)]
+- CSS Flexbox - W3Schools [[Tutorial](https://www.w3schools.com/css/css3_flexbox.asp)]
+
+### Grid
+
+- CSS Grid Course - Wes Bos [[Course](https://cssgrid.io)]
+- Layout Land - Jen Simmons, Mozilla Designer and Developer Advocate [[YouTube](https://www.youtube.com/channel/UC7TizprGknbDalbHplROtag)]
+- Learn CSS Grid - Jen Simmons [[Article](http://jensimmons.com/post/feb-27-2017/learn-css-grid)]
+- CSS Grid Layout Module [[Tutorial](https://www.w3schools.com/css/css_grid.asp)]
+
+### Other Web Stuff
+
+- DevTips [[YouTube](https://www.youtube.com/user/DevTipsForDesigners)]
+- Jen Simmons [[Website](http://jensimmons.com/)]
+
 
 ***
 
