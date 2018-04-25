@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <input class="display" name="display" type="text" placeholder="0" />
+    <div class="numbers">
+      <button class="button number" data-value="9" data-type="num">9</button>
+      <button class="button number" data-value="8" data-type="num">8</button>
+      <button class="button number" data-value="7" data-type="num">7</button>
+      <button class="button number" data-value="6" data-type="num">6</button>
+      <button class="button number" data-value="5" data-type="num">5</button>
+      <button class="button number" data-value="4" data-type="num">4</button>
+      <button class="button number" data-value="3" data-type="num">3</button>
+      <button class="button number" data-value="2" data-type="num">2</button>
+      <button class="button number" data-value="1" data-type="num">1</button>
+      <button class="button number zero" data-value="0" data-type="num">0</button>
+      <button class="button number" data-value="." data-type="num">.</button>
+    </div>
+    <div class="operators">
+      <button class="button operator">/</button>
+      <button class="button operator">*</button>
+      <button class="button operator">-</button>
+      <button class="button operator">+</button>
+      <button class="button operator">=</button>
+    </div>
+    <div class="others">
+      <button class="button">Clear</button>
+      <button class="button">+/-</button>
+      <button class="button">%</button>
+    </div>
+  </div>
+</body>
+
+<style>
+  body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+  }
+  .calculator {
+    width: 100vw;
+    height: 100vh;
+    max-width: 400px;
+    max-height: 600px;
+    margin: auto;
+    display: grid;
+    grid-template: 1fr 1fr 4fr / 3fr 1fr;
+    grid-template-areas:
+      "display  display"
+      "others   operators"
+      "numbers   operators";
+
+    background: var(--black);
+    grid-auto-flow: dense;
+
+    box-shadow: 0 0 10em #00000044;
+  }
+
+  .button {
+    border-radius: 0;
+    border: 1px solid white;
+    background: none;
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .numbers {
+    grid-area: "numbers";
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    background: #ffffff18;
+  }
+
+  .operator {
+    color: var(--black);
+  }
+
+  .zero {
+    grid-column: span 2;
+  }
+
+  .operators {
+    grid-area: operators;
+    background-color: var(--yellow);
+    display: grid;
+  }
+
+  .others {
+    grid-area: others;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .display {
+    grid-area: display;
+    font-size: 4em;
+    max-width: 100%;
+    text-align: right;
+    padding: 0.5em;
+  }
+
+
+
+</style>
+
+<script type="text/javascript">
+  const state = {
+    operandA: '',
+    operandB: '',
+    operator: ''
+  };
+
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(button => button.addEventListener('click', handleButtonPress));
+
+  const display = document.querySelector('.display');
+
+  function handleButtonPress(e) {
+    const type = e.target.getAttribute('data-type');
+    const value = e.target.getAttribute('data-value');
+
+    switch (type) {
+      case 'num':
+        display.value += value;
+
+        break;
+      case 'op':
+        operator = value;
+        this.classList.add('active');
+        break;
+      default:
+        console.error(`ERROR: Key type '${type}' is not valid.`);
+    }
+  }
+
+  function evaluate(operator, operandA, operandB) {
+    if (!operandA || !operandB) return;
+    switch (operator) {
+      case ADD:
+        return operandA + operandB;
+      case SUB:
+        return operandA + operandB;
+      case MUL:
+        return operandA + operandB;
+      case DIV:
+        return operandA + operandB;
+      default:
+        console.error('Invalid Operator');
+    }
+  }
+</script>
+
+</html>

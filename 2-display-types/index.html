@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>CSS Display Types</title>
+</head>
+
+<body>
+  <h1>Display Types</h1>
+  <hr />
+  <h2>Inline Elements</h2>
+  <div>
+    <span class="inline">This is an inline element.</span>
+    <span class="inline">This is another inline element.</span>
+    <span class="inline">...and another one.</span>
+    <span class="inline">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+    <span class="inline">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
+    <span class="inline">Venenatis Tristique Ornare</span>
+  </div>
+
+  <h2>Block Elements</h2>
+  <div>
+    <div class="block">This is a block element.</div>
+    <div class="block">This is another block element.</div>
+    <div class="block">...and another one.</div>
+    <div class="block">
+      Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget
+      risus varius blandit sit amet non magna. Sed posuere consectetur est at
+      lobortis. Sed posuere consectetur est at lobortis.
+    </div>
+  </div>
+
+  <h2>Inline Block Elements</h2>
+  <div>
+    <span class="inline-block">This is an inline block element.</span>
+    <span class="inline-block">This is another inline block element.</span>
+    <span class="inline-block">...and another one.</span>
+    <span class="inline-block">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+    <span class="inline-block">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
+    <span class="inline-block">Venenatis Tristique Ornare</span>
+  </div>
+
+  <h2>Flex Elements</h2>
+  <div class="flex">
+    <span class="flex-child">This is an inline block element.</span>
+    <span class="flex-child">This is another inline block element.</span>
+    <span class="flex-child">...and another one.</span>
+    <span class="flex-child">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+    <span class="flex-child">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
+    <span class="flex-child">Venenatis Tristique Ornare</span>
+  </div>
+
+  <h2>Grid Elements</h2>
+  <div class="grid">
+    <span class="grid-item">This is an inline block element.</span>
+    <span class="grid-item">This is another inline block element.</span>
+    <span class="grid-item">...and another one.</span>
+    <span class="grid-item">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+    <span class="grid-item">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</span>
+    <span class="grid-item">Venenatis Tristique Ornare</span>
+  </div>
+</body>
+
+<style>
+  h2 {
+    margin: 1em 0;
+  }
+
+  .inline {
+    border: 1px solid red;
+    box-sizing: content-box; /* default */
+    background: var(--yellow);
+    color: white;
+    padding: 1em;
+    margin: 1em;
+
+    /* width: 200px; */
+  }
+
+  .block {
+    box-sizing: content-box; /* default */
+    background: var(--purple);
+    color: white;
+    padding: 1em;
+    margin: 1em;
+
+    /* width: 200px; */
+  }
+
+  .inline-block {
+    box-sizing: content-box; /* default */
+    background: var(--green);
+    display: inline-block;
+    color: white;
+    padding: 1em;
+    margin: 10px;
+
+    /* width: 200px; */
+    /* box-sizing: border-box;
+    width: calc(33% - 20px);
+    text-align: center; */
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-child {
+    background: var(--black);
+    color: white;
+    padding: 1em;
+    margin: 1em;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 1em;
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+  }
+
+  .grid-item {
+    background: var(--purple);
+    color: white;
+    padding: 1em;
+  }
+</style>
+
+</html>

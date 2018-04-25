@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/cvent-style.css">
+  <title>Resonsive Website</title>
+</head>
+
+<body>
+  <div class="connect-banner">
+    <span class="text">Cvent CONNECT 2018 Early Bird Pricing Ends May 1</span>
+    <a class="link" href="#">Register Now</a>
+  </div>
+  <header class="header">
+    <div class="branding">
+      <img class="logo" src="../assets/images/cvent-logo.png" alt="cvent" />
+      <span class="slogan">Transforming Meetings and Events</span>
+    </div>
+    <a class="menu link" href="#">MENU</a>
+    <span class="right">
+      <span>
+        <a class="link" href="#">Contact Us</a>:
+        <span>844.606.0306</span>
+      </span>
+      <button class="cta">Find Event Venues</button>
+      <a class="link">Login</a>
+    </span>
+  </header>
+  <nav class="navbar">
+    <a href="#">Meetings, Events & Travel</a>
+    <a href="#">Hoteliers & Venues</a>
+    <a href="#">Solutions</a>
+    <a href="#">Customer Resources</a>
+    <a href="#">About Us</a>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="title">Transform your corporate events into experiences</h1>
+      <p class="description">Manage corporate events of all shapes, sizes, and complexities with the power of Cvent’s event technology.</p>
+      <button class="cta">Learn More</button>
+      <button class="cta secondary">Request a Demo</button>
+    </div>
+  </section>
+</body>
+
+<style>
+  .connect-banner {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .connect-banner .link {
+    margin-left: 1em;
+  }
+
+  .header {
+    overflow: auto;
+  }
+  .branding {
+    float: left;
+    padding: 1rem;
+  }
+
+  .logo {
+    display: block;
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .right {
+    float: right;
+    padding: 1.5em;
+  }
+
+  .right > * {
+    margin-left: 1em;
+  }
+
+  .navbar {
+    overflow: auto;
+  }
+
+  .navbar > * {
+    display: inline-block;
+    margin: 1em;
+  }
+
+  .hero {
+    padding: 12vh 1em;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .menu {
+    display: none;
+    float: right;
+    padding: 2em;
+  }
+
+  @media (max-width: 992px) {
+    .right, .navbar {
+      display: none;
+    }
+    .menu {
+      display: inline-block;
+    }
+  }
+
+</style>
+
+</html>

@@ -1,0 +1,72 @@
+/*
+  Oh Hello!
+
+  These are some base styles so that our tutorial looks good.
+
+  Let's go through the important bits real quick
+*/
+:root {
+  /*
+    These are CSS variables that can be changed even at runtime.
+    We will be using them in these examples, but won't be going too in depth so
+    don't worry too much about them. They're real cool though!
+  */
+  --yellow: #ffc600;
+  --black: #272727;
+  --purple: #9013FE;
+  --green: #62BA02;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url("./images/paper.png"),
+    linear-gradient(110deg, #f3f3f3, #eeeedd);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  background-attachment: fixed;
+  letter-spacing: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  font-size: 35px;
+  background-color: var(--yellow); /* best colour */
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
