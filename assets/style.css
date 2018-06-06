@@ -67,6 +67,10 @@ h6 {
   background-color: var(--yellow); /* best colour */
 }
 
+p {
+  font-style: italic;
+}
+
 .item p {
   margin: 0 0 5px 0;
 }

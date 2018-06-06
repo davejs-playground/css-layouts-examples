@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Lunch and Learn</title>
+  </head>
+  <style>
+    head, title {
+      display: block;
+    }
+
+    .block {
+      background: pink;
+    }
+    .block:hover {
+      background: red;
+    }
+
+    .block:active {
+      background: blue;
+    }
+    .block:focus {
+      background: yellow;
+    }
+    .block:first-child {
+      background: yellow;
+    }
+    .block:last-child {
+      background: red;
+    }
+
+    .block:nth-child(odd){
+      background: green;
+    }
+
+    p::first-letter {
+      font-size: 2em;
+    }
+
+    p::first-line {
+      font-size: 2em;
+    }
+    :root {
+      font-size: 30px;
+    }
+
+    .dropdown {
+      font-size: 60px;
+      margin: 1rem;
+      width: 200px;
+      border: 1px solid grey;
+      position: relative;
+    }
+    .dropdown::before {
+      content: "";
+      display: block;
+      background: pink;
+      height: 1em;
+      width: 1em;
+      position: absolute;
+      top: -0.25em;
+      left: 0.5em;
+      transform: rotateZ(45deg);
+      background: white;
+      border: inherit;
+    }
+    .dropdown a {
+      display: block;
+    }
+
+
+
+
+
+    .one {
+      background: blue;
+      color: white;
+    }
+
+    span {
+      color: red;
+    }
+
+    .one > b {
+      color: green;
+    }
+
+    span + b {
+      background: purple;
+    }
+
+    b[data-status|="new"] {
+      font-size: 2em;
+    }
+
+    b[data-status$="important"] {
+      font-style: italic;
+    }
+
+  </style>
+  <body>
+    <div>
+      <div class="one">
+        <span>Span</span>
+        <b>bold</b>
+        <b data-status="new-important">bold</b>
+        <b data-status="new">bold</b>
+        <b>bold</b>
+        <span>
+          <b>Bold</b>
+          Span
+        </span>
+        One
+        <b>bold</b>
+      </div>
+        <div class="two">
+          <b>Bold</b>
+          Two</div>
+    </div>
+  </body>
+</html>
